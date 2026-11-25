@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Iniciar sesión";
+}
+
+<div class="text-center">
+    <h1><strong>@ViewBag.Title</strong></h1>
+
+    <p class="text-muted">
+        Inicie sesión al sistema de gestión de proyectos
+    </p>
+</div>
+
+<div class="justify-content-center w-25 mx-auto card shadow-lg border-0">
+    <div class="card-body p-4">
+        <div class="mb-3">
+            <label for="Email" class="form-label">
+                Correo electrónico
+            </label>
+            <input type="email" class="form-control" id="Email">
+        </div>
+        <div class="mb-4">
+            <label for="Password" class="form-label">
+                Contraseña
+            </label>
+            <input type="password" class="form-control" id="Password">
+        </div>
+
+        <button type="button" class="btn btn-primary">
+            Iniciar sesión
+        </button>
+    </div>
+</div>
+
+
+@*@using (Html.BeginForm("Login", "Account", FormMethod.Post))
+    {
+        <div class="form-group">
+            <label for="Email">Correo:</label>
+            @Html.TextBoxFor(model => model.Email, new { @class = "form-control", type = "email" })
+        </div>
+
+        <div class="form-group">
+            <label for="Password">Contraseña:</label>
+            @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Iniciar sesión
+        </button>
+
+        if (ViewBag.Error != null)
+        {
+            <p class="text-danger">@ViewBag.Error</p>
+        }
+    }*@
