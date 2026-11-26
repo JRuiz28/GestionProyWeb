@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Crear usuario";
+}
+
+<div>
+    <a href="@Url.Action("AdminIndex", "Tickets")" class="btn btn-primary" title="Regresar">
+        Regresar
+    </a>
+</div>
+
+<div class="text-center">
+    <h1><strong>@ViewBag.Title</strong></h1>
+
+    <p class="text-muted">
+        Agregue un nuevo usuario
+    </p>
+</div>
+
+<div class="justify-content-center w-50 mx-auto card shadow-lg border-0 my-5">
+    <div class="card-body p-4">
+        <div class="mb-3">
+            <label for="Name" class="form-label">
+                Nombre
+            </label>
+            <input type="text" class="form-control" id="Name">
+        </div>
+        <div class="mb-4">
+            <label for="Email" class="form-label">
+                Correo
+            </label>
+            <input type="email" class="form-control" id="Email">
+        </div>
+        <div class="mb-4">
+            <label for="Pass" class="form-label">
+                Contraseña
+            </label>
+            <input type="password" class="form-control" id="Pass">
+        </div>
+        <div class="mb-4">
+            <label for="Role" class="form-label">
+                Rol
+            </label>
+            <select class="form-select" id="Role">
+                <option value="" selected>Seleccione un rol</option>
+                <option value="1">Administrador</option>
+                <option value="2">Usuario</option>
+            </select>
+        </div>
+
+        <div class="mb-4">
+            <label for="State" class="form-label">
+                Estado
+            </label>
+            <select class="form-select" id="State">
+                <option value="" selected>Seleccione un estado</option>
+                <option value="1">Activo</option>
+                <option value="2">Inactivo</option>
+            </select>
+        </div>
+
+        <button type="button" class="btn btn-primary">
+            Crear usuario
+        </button>
+    </div>
+</div>

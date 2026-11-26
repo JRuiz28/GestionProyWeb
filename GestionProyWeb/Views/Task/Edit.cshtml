@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "Editar Tarea";
+}
+
+<div>
+    <a href="@Url.Action("AdminIndex", "Tickets")" class="btn btn-primary" title="Regresar">
+        Regresar
+    </a>
+</div>
+
+<div class="text-center">
+    <h1><strong>@ViewBag.Title</strong></h1>
+
+    <p class="text-muted">
+        Editar una tarea
+    </p>
+</div>
+
+<div class="justify-content-center w-50 mx-auto card shadow-lg border-0 my-5">
+    <div class="card-body p-4">
+        <input type="hidden" class="form-control" id="project_id">
+
+        <div class="mb-3">
+            <label for="Title" class="form-label">
+                Titulo
+            </label>
+            <input type="text" class="form-control" id="Title">
+        </div>
+        <div class="mb-4">
+            <label for="Description" class="form-label">
+                Descripción
+            </label>
+            <textarea rows="4" class="form-control"></textarea>
+        </div>
+        <div class="mb-4">
+            <label for="Assigned" class="form-label">
+                Asignado a
+            </label>
+            <select class="form-select" id="Estado" name="Estado">
+                <option value="" selected disabled>Seleccione un responsable</option>
+                <option value="1">Mario</option>
+                <option value="2">Gerald</option>
+                <option value="3">Ana</option>
+            </select>
+        </div>
+        <div class="mb-4">
+            <label for="State" class="form-label">
+                Estado
+            </label>
+            <select class="form-select" id="State">
+                <option value="" selected>Seleccione un estado</option>
+                <option value="1">Pendiente</option>
+                <option value="2">En proceso</option>
+                <option value="3">Completada</option>
+            </select>
+        </div>
+        <div class="mb-4">
+            <label for="Priority" class="form-label">
+                Prioridad
+            </label>
+            <select class="form-select" id="Priority">
+                <option value="" selected>Seleccione una prioridad</option>
+                <option value="1">Baja</option>
+                <option value="2">Media</option>
+                <option value="3">Alta</option>
+            </select>
+        </div>
+        <div class="mb-4">
+            <label for="DateExpire" class="form-label">
+                Fecha de expiración
+            </label>
+            <input type="date" class="form-control" id="DateExpire">
+        </div>
+
+        <button type="button" class="btn btn-primary">
+            Guardar
+        </button>
+    </div>
+</div>

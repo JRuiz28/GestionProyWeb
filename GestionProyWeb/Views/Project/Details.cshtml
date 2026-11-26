@@ -3,6 +3,12 @@
     ViewBag.Title = "[Nombre del proyecto]";
 }
 
+<div>
+    <a href="@Url.Action("AdminIndex", "Tickets")" class="btn btn-primary" title="Regresar">
+        Regresar
+    </a>
+</div>
+
 <div class="text-center">
     <h1><strong>@ViewBag.Title</strong></h1>
 
@@ -11,10 +17,15 @@
     </p>
 </div>
 
-<div class="row mt-3">
+<div class="row mt-4">
     <div class="col-lg-9">
         <div class="row row-3 g-4">
-            <h3>Tareas del proyecto</h3>
+            <div class="d-flex justify-content-between align-items-center">
+                <h3>Tareas del proyecto</h3>
+                <button type="button" class="btn btn-success">
+                    Nueva Tarea
+                </button>
+            </div>
             <div class="col">
                 <div class="card shadow-sm border-0 h-100">
                     <img src="../Img/bg-card-task.jpg" class="card-img-top" alt="">
@@ -24,6 +35,14 @@
                             This is a longer card with supporting text below
                             as a natural lead-in to additional content.
                         </p>
+
+                        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#taskInfoModal">
+                            Info
+                        </button>
+
+                        <button type="button" class="btn btn-outline-warning">
+                            Editar
+                        </button>
                     </div>
                 </div>
             </div>
@@ -36,6 +55,14 @@
                             This is a longer card with supporting text below
                             as a natural lead-in to additional content.
                         </p>
+
+                        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#taskInfoModal">
+                            Info
+                        </button>
+
+                        <button type="button" class="btn btn-outline-warning">
+                            Editar
+                        </button>
                     </div>
                 </div>
             </div>
@@ -48,6 +75,14 @@
                             This is a longer card with supporting text below
                             as a natural lead-in to additional content.
                         </p>
+
+                        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#taskInfoModal">
+                            Info
+                        </button>
+
+                        <button type="button" class="btn btn-outline-warning">
+                            Editar
+                        </button>
                     </div>
                 </div>
             </div>
@@ -55,7 +90,7 @@
     </div>
 
     <div class="col-lg-3 mt-4 mt-lg-0">
-        <div class="card shadow-sm border-0">
+        <div class="card shadow-lg border-0">
             <div class="card-body">
                 <h4 class="card-title">Información del proyecto</h4>
                 <p class="card-text text-muted">
@@ -64,7 +99,7 @@
                 <hr />
                 <h4>Resumen</h4>
                 <p class="mb-2">
-                    <strong>Proyecto creado el día:</strong> 12/12/2026
+                    <strong>Proyecto creado:</strong> 12/12/2026
                 </p>
                 <p class="mb-2">
                     <strong>Fecha de inicio:</strong> 12/12/2026
@@ -89,5 +124,34 @@
                 </button>
             </div>
         </div>
+    </div>
 </div>
 
+
+<div class="modal fade" id="taskInfoModal" tabindex="-1" aria-labelledby="taskInfoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="taskInfoModalLabel">
+                    Información de la tarea
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <p class="card-text text-muted">
+                    [Descripción]
+                </p>
+                <hr />
+                <p><strong>Estado:</strong> En progreso</p>
+                <p><strong>Fecha de inicio:</strong> 25/11/2026</p>
+                <p><strong>Fecha de finalización:</strong> 25/12/2026</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

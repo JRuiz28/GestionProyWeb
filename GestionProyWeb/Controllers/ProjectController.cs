@@ -19,5 +19,23 @@ namespace GestionProyWeb.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Edit()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult EditState()
+        {
+            return View();
+        }
     }
 }
